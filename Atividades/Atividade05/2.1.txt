@@ -1,0 +1,34 @@
+create table CURSO (
+	id_curso INTEGER not null,
+	nome_curso VARCHAR(100) not null,
+	carga_horaria smallint,
+	primary key(id_curso)
+);
+
+create table TURMA (
+	id_turma INTEGER not null,
+	id_curso INTEGER not null,
+	id_professor INTEGER not null,
+	id_aluno INTEGER not null,
+	data_matricula DATE not null,
+        primary key(id_turma),
+	foreign key(id_curso) reference on CURSO,
+	foreign key(id_professor) reference on PROFESSOR,
+	foreign key(id_aluno) reference on ALUNO
+);
+
+create table ALUNO (
+	id_aluno INTEGER not null,
+	nome_aluno VARCHAR(100) not null,
+	email_aluno VARCHAR(100),
+	fone_contato char(14),
+	primary key(id_aluno)
+);
+
+create table PROFESSOR (
+	id_professor INTEGER not null,
+	nome_professor VARCHAR(100) not null,
+	titular_professor char(3),
+	primary key(id_professor)
+);
+
