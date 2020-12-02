@@ -1,0 +1,27 @@
+5 - 
+INSERT INTO turma (id_turma, num_periodo, id_disciplina)
+VALUES (3, 20201, 3); 
+
+6 - 
+INSERT INTO turma (id_turma, num_periodo, id_disciplina)
+VALUES (3, 20202, 1); 
+
+7 - 
+UPDATE disciplina
+SET id_disciplina = 1;
+WHERE nome_disciplina = 'BANCO DE DADOS I'; 
+
+8 - 
+UPDATE historico
+SET num_faltas = 0;
+WHERE id_aluno igual = 1; 
+
+UPDATE historico
+SET num_faltas = 0;
+WHERE id_turma igual = 1; 
+
+9 - 
+DELETE FROM aluno WHERE nome_aluno = PEDRO;
+
+10 - 
+DELETE FROM disciplina WHERE nome_disciplina = BANCO DE DADOS II;
